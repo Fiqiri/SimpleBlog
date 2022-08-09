@@ -1,0 +1,21 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Article Details</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+  </head>
+  <body>
+    <div class="article-detail">
+        <div class="article">
+            <img src="{{ article.image.url }}">
+            <h2>{{ article.slug}}</h2>
+            <p>{{ article.content }}</p>
+            <p>{{ article.tags.all|join:" " }}</p>
+            <p>{{ article.date }}</p>
+        </div>
+    </div>
+  </body>
+</html>
