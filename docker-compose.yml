@@ -15,7 +15,7 @@ services:
     volumes:
       - .:/code
     ports:
-      - "8000:8000"
+      - "8000:80"
     environment:
       - POSTGRES_NAME=test_post_blog
       - POSTGRES_USER=pguser
