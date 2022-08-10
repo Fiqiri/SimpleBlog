@@ -15,7 +15,8 @@ services:
     volumes:
       - .:/code
     ports:
-      - "73:8000"
+      - "8000:8000"
+      EXPOSE 8000
     environment:
       - POSTGRES_NAME=postgres
       - POSTGRES_USER=postgres
