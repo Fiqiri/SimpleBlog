@@ -1,4 +1,4 @@
-version: "3.9"
+version: "3.1"
    
 services:
   db:
@@ -11,14 +11,14 @@ services:
       - POSTGRES_PASSWORD=postgres
   web:
     build: .
-    command: python manage.py runserver 0.0.0.0:80
+    command: python manage.py runserver 0.0.0.0:8000
     volumes:
       - .:/code
     ports:
       - "8000:80"
     environment:
-      - POSTGRES_NAME=test_post_blog
-      - POSTGRES_USER=pguser
-      - POSTGRES_PASSWORD=pguser
+      - POSTGRES_NAME=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
     depends_on:
       - db
