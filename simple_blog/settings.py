@@ -74,11 +74,8 @@ WSGI_APPLICATION = 'simple_blog.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'test_post_blog',
-        'USER': 'pguser',
-        'PASSWORD': 'pguser',
-        'HOST': 'localhost'
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
